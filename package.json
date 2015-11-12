@@ -5,7 +5,8 @@
   "main": "src/index.tsx",
   "scripts": {
     "postinstall": "node node_modules/tsd/build/cli.js install",
-    "start": "node_modules/.bin/webpack",
+    "start": "node devServer.js",
+    "build": "node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Marcel Hoyer",
@@ -16,9 +17,18 @@
     "redux": "^3.0.4"
   },
   "devDependencies": {
+    "babel-core": "^5.8.33",
+    "babel-loader": "^5.3.3",
+    "babel-plugin-react-transform": "^1.1.1",
+    "express": "^4.13.3",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
     "ts-loader": "^0.7.1",
     "tsd": "^0.6.5",
     "typescript": "^1.6.2",
-    "webpack": "^1.12.4"
+    "webpack": "^1.12.4",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.5.0"
   }
 }
